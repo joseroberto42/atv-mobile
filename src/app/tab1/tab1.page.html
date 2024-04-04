@@ -1,17 +1,39 @@
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Projeto 1 - mobile
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  <ion-card>
+  <img class="img" alt="Silhouette of mountains" src="../../assets/img/Snoop.jpeg" />
+  
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card-content class="container">
+    Esse aplicativo foi desenvolvido como parte da disciplina de desenvolvimento mobile
+  </ion-card-content>
+</ion-card>
 </ion-content>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of itens">
+      <ion-avatar slot="start">
+        <img [src]="'./' + item.imagem">
+      </ion-avatar>
+      <ion-label>
+        <h2> Aludo {{item.id}} - {{ item.nome }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+
+
+
+
+
+
